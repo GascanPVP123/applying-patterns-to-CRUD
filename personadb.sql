@@ -3,15 +3,15 @@ CREATE DATABASE  IF NOT EXISTS `personadb`
 DROP TABLE IF EXISTS `persona`;
 
 CREATE TABLE `persona` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dni` varchar(255) DEFAULT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `apellidos` varchar(100) NOT NULL,
-  `telefono` varchar(255) DEFAULT NULL,
-  `estado` varchar(255) DEFAULT NULL,
-  `categoria` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  id int(11) NOT NULL AUTO_INCREMENT,
+  dni char(8) DEFAULT NULL,
+  nombre char(30) NOT NULL,
+  apellidos char(50) NOT NULL,
+  telefono char(9) DEFAULT NULL,
+  estado char(25) DEFAULT NULL,
+  categoria char(25) DEFAULT NULL,
+  created_at timestamp NOT NULL DEFAULT current_timestamp(),
+  updated_at timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `dni` (`dni`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
